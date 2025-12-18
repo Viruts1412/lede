@@ -1,0 +1,53 @@
+CONFIG_TARGET_mvebu=y
+CONFIG_TARGET_mvebu_cortexa9=y
+CONFIG_TARGET_mvebu_cortexa9_DEVICE_linksys_wrt1900ac-v1=y
+
+# LuCI minimal + SSL
+CONFIG_PACKAGE_luci=y
+CONFIG_PACKAGE_luci-ssl=y
+CONFIG_PACKAGE_luci-base=y
+CONFIG_PACKAGE_luci-mod-admin-full=y
+CONFIG_PACKAGE_luci-mod-network=y
+CONFIG_PACKAGE_luci-mod-status=y
+CONFIG_PACKAGE_luci-mod-system=y
+CONFIG_PACKAGE_luci-app-opkg=y
+CONFIG_PACKAGE_luci-compat=y
+
+# Theme (chỉ giữ 1 theme để build nhanh)
+CONFIG_PACKAGE_luci-theme-bootstrap=y
+
+# Web server
+CONFIG_PACKAGE_uhttpd=y
+CONFIG_PACKAGE_uhttpd-mod-ubus=y
+CONFIG_PACKAGE_rpcd=y
+CONFIG_PACKAGE_rpcd-mod-luci=y
+
+# CPU Temperature support
+CONFIG_PACKAGE_kmod-hwmon-core=y
+CONFIG_PACKAGE_kmod-hwmon-armada-thermal=y
+
+# Statistics (biểu đồ CPU temp)
+CONFIG_PACKAGE_luci-app-statistics=y
+CONFIG_PACKAGE_collectd=y
+CONFIG_PACKAGE_collectd-mod-thermal=y
+CONFIG_PACKAGE_collectd-mod-cpu=y
+
+# Network essentials
+CONFIG_PACKAGE_dnsmasq-full=y
+CONFIG_PACKAGE_ppp=y
+CONFIG_PACKAGE_ppp-mod-pppoe=y
+CONFIG_PACKAGE_odhcp6c=y
+CONFIG_PACKAGE_ip-full=y
+
+# Wireless
+CONFIG_PACKAGE_wpad-basic-mbedtls=y
+CONFIG_PACKAGE_iwinfo=y
+CONFIG_PACKAGE_libiwinfo-lua=y
+
+# Kernel thermal subsystem
+CONFIG_KERNEL_THERMAL=y
+CONFIG_KERNEL_THERMAL_DEFAULT_GOV_STEP_WISE=y
+
+# Useful tools
+CONFIG_PACKAGE_htop=y
+CONFIG_PACKAGE_lsblk=y
